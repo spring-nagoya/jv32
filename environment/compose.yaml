@@ -1,0 +1,8 @@
+services:
+  java-app:
+    build:
+      context: .docker/app
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app
+    

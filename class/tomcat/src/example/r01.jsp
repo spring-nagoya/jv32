@@ -40,6 +40,23 @@
       i++;
     }
 
+    int code = 404;
+
+    switch (code)  {
+      case 404:
+        out.println("<br /> Not Found"); 
+        break;
+      case 500:
+        out.println("<br /> Internal Server Error"); 
+        break;
+      case 200:
+        out.println("<br /> Status Ok"); 
+        break;
+      default:
+        out.println("<br /> ");
+    }
+
+
   %>
 
  

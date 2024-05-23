@@ -1,0 +1,7 @@
+services:
+  java-app:
+    image: tomcat:9.0.13-jre11-slim
+    ports:
+      - 8080:8080
+    volumes:
+      - ./src:/usr/local/tomcat/webapps

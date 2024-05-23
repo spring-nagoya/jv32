@@ -1,0 +1,1 @@
+FROM tomcat:11.0.0-jdk21 AS app

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
   <title>Hello, world!</title>
 </head>
 <body>
@@ -30,6 +29,17 @@
     }else {
       out.println("<br />等しくない");
     }
+
+    for(int i=0; i < 10; i++) {
+      out.println(i);
+    }
+
+    int i = 0;
+    while (i < 10) {
+      out.println("<br /> \n"+ i); 
+      i++;
+    }
+
   %>
 
  

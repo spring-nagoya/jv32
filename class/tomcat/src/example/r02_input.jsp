@@ -9,8 +9,8 @@
   %>
   <h1><%= "ktok over 180lbs !!!!" %></h1>
 
-  <form action="" method="get">
-    名前: <input type="text" name="name" >
+  <form action="/r02_output.jsp" method="get">
+    name: <input type="text" name="name" >
     <input type="submit" value="submit">
   </form>
 </body>

@@ -5,14 +5,23 @@
 </head>
 <body>
   <%
-    String strName = request.getParameter("name");
-    if (strName != null) {
-      if (strName.equals("")) {
-        strName = "未入力";
-      }
-    }else {
-      response.sendRedirect("/example/r02_input.jsp");
+    String strID = request.getParameter("txtId");
+    String strPass = request.getParameter("txtPass");
+
+    if (strID == null || strPass == null) {
+      response.sendRedirect("/example/r03_input.jsp");
     }
+
+    String actualID = "admin";
+    String actualPass = "1234";
+    
+    if (!strID.equals(actualID) || !strPass.equals(actualPass)) {
+      out.println("authenticate failed");
+      return;
+    }
+
+    out.println("authenticate successful");
+
 %>
 
   input value: <%= strName %>

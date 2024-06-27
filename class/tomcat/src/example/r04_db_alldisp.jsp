@@ -22,7 +22,17 @@
   
   con = DriverManager.getConnection("jdbc:mysql://localhost","admin","mysql");
 
-  
+  stmt = con.createStatement();
+
+  String strSQL = "SELECT * FROM users";
+
+  rs = stmt.executeQuery(strSQL);
+  while (rs.next()) {
+    out.println(rs.getString("name"));
+  }
+
+  rs.close();
+  stmt.close();
   con.close();
 %>
 </body>

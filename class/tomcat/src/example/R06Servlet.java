@@ -49,6 +49,8 @@ public class R06Servlet
 		Statement stmt = null;
 		ResultSet rs = null;
 
+		ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
+
 		try {
 		//①Driverの読み込み
 			Class.forName("com.mysql.jdbc.Driver");
@@ -71,6 +73,15 @@ public class R06Servlet
 			while(rs.next()){
 				System.out.println(rs.getString("f_name"));
 				System.out.println("<br/>");
+
+				HashMap<String, String> map = new HashMap<String, String>();
+
+				map.put("f_id",rs.getString("f_id"));
+				map.put("f_name",rs.getString("f_name"));
+				map.put("f_age",rs.getString("f_age"));
+				map.put("f_pass",rs.getString("f_pass"));
+
+				list.add(map);
 			}
 
 			//rsの解放
